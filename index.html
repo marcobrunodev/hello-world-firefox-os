@@ -5,6 +5,41 @@
 	<title>Hello World Firefox OS</title>
 	<link rel="stylesheet" href="css/main.css">
 </head>
+<script>
+// Connection
+var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+
+function updateConnectionStatus() {
+  alert("Connection bandwidth: " + connection.bandwidth + " MB/s");
+  if (connection.metered) {
+    alert("The connection is metered!");
+  }
+}
+
+connection.addEventListener("change", updateConnectionStatus);
+updateConnectionStatus();
+
+
+// Battery
+var battery = navigator.battery || navigator.mozBattery || navigator.webkitBattery;
+
+function updateBatteryStatus() {
+  alert("Battery status: " + battery.level * 100 + " %");
+
+  if (battery.charging) {
+    alert("Battery is charging"); 
+  }
+}
+
+battery.addEventListener("chargingchange", updateBatteryStatus);
+battery.addEventListener("levelchange", updateBatteryStatus);
+updateBatteryStatus();
+
+// Orientation <-- Probabilmente non compatibile
+screen.addEventListener("orientationchange", function () {
+  alert("The orientation of the screen is: " + screen.orientation);
+});
+</script>
 <body>
 	<article class="content">
 		<h1>Hello World <br>Ricci Edit</h1>
