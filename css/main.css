@@ -30,11 +30,11 @@ body, html { height: 100%; }
 	cursor: pointer;
 }
 #smile.is-active {
-	-webkit-animation: girar 0.5s;
-	   -moz-animation: girar 0.5s;
-		-ms-animation: girar 0.5s;
-		 -o-animation: girar 0.5s;
-			animation: girar 0.5s;
+	-webkit-animation: girar 5s;
+	   -moz-animation: girar 5s;
+		-ms-animation: girar 5s;
+		 -o-animation: girar 5s;
+			animation: girar 5s;
 }
 @keyframes girar {
 	0% {
@@ -44,19 +44,19 @@ body, html { height: 100%; }
 			-ms-transform: rotate(0deg);
 				transform: rotate(0deg);
 	}
-	25% {
-		-webkit-transform: rotate(30deg);
-		   -moz-transform: rotate(30deg);
-			 -o-transform: rotate(30deg);
-			-ms-transform: rotate(30deg);
-				transform: rotate(30deg);
+	45% {
+		-webkit-transform: rotate(90deg);
+		   -moz-transform: rotate(90deg);
+			 -o-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+				transform: rotate(90deg);
 	}
-	75% {
-		-webkit-transform: rotate(-30deg);
-		   -moz-transform: rotate(-30deg);
-			 -o-transform: rotate(-30deg);
-			-ms-transform: rotate(-30deg);
-				transform: rotate(-30deg);
+	90% {
+		-webkit-transform: rotate(-90deg);
+		   -moz-transform: rotate(-90deg);
+			 -o-transform: rotate(-90deg);
+			-ms-transform: rotate(-90deg);
+				transform: rotate(-90deg);
 	}
 	100% {
 		-webkit-transform: rotate(0deg);
